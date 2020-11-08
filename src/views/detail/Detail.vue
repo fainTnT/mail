@@ -116,7 +116,7 @@
       // 获取推荐列表
       getRecommend().then((res, error) => {
         if (error) return
-        this.recommendList = res.data.list;
+        this.recommendList = res.data.data.list;
       })
     },
     mounted(){

@@ -30,14 +30,14 @@
       getCategoryData().then((res)=>{
         this.categoryList = res.data.data.category.list;
         getSubcategory(this.categoryList[0].maitKey).then((res)=>{
-          this.subCategoryList = res.data.list;
+          this.subCategoryList = res.data.data.list;
         });
       });
     },
     methods:{
       categoryListClick(maitKey){
         getSubcategory(maitKey).then((res)=>{
-          this.subCategoryList = res.data.list;
+          this.subCategoryList = res.data.data.list;
         });
       }
     }

@@ -1,5 +1,5 @@
 import {request} from "network/request";
-import axios from "axios";
+
 
 export function getCategoryData(){
   return request({
@@ -8,7 +8,7 @@ export function getCategoryData(){
 }
 
 export function getSubcategory(maitKey) {
-  return axios({
+  return request({
     url: '/subcategory',
     params: {
       maitKey

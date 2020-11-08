@@ -5,7 +5,7 @@
         <img src="~assets/img/common/back.svg" alt="">
       </div>
       <div slot="center" class="nav-title">
-        <div v-for="(item,index) in titles" class="title" :class="{active:currentIndex == index}" @click="itemClick(index)">{{item}}</div>
+        <div v-for="(item,index) in titles" class="title" :class="{'active':index === cIndex}" @click="itemClick(index)" :key="index">{{item}}</div>
       </div>
     </nav-bar>
   </div>
@@ -18,12 +18,12 @@
     data(){
       return {
         titles:['商品','参数','评论','推荐'],
-        currentIndex: 0
+        cIndex: 0
       }
     },
     methods:{
       itemClick(index){
-        this.currentIndex = index;
+        this.cIndex = index;
         this.$emit('titleClick',index);
       },
       imgBack(){

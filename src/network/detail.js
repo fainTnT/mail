@@ -1,5 +1,5 @@
-import {request} from "./request"
-import axios from "axios";
+
+import {request} from "network/request";
 
 export function getDetailData(id){
   return request({
@@ -11,7 +11,7 @@ export function getDetailData(id){
 }
 
 export function getRecommend() {
-  return axios({
+  return  request({
     url: '/recommend'
   })
 }
