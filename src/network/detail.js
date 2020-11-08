@@ -1,5 +1,5 @@
 import {request} from "./request"
-import axios from "../../../coderwhy项目/HYMall-master/src/network/axios";
+import axios from "axios";
 
 export function getDetailData(id){
   return request({
