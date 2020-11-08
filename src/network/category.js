@@ -1,5 +1,5 @@
 import {request} from "network/request";
-import axios from "../../../coderwhy项目/HYMall-master/src/network/axios";
+import axios from "axios";
 
 export function getCategoryData(){
   return request({
